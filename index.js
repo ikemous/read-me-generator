@@ -1,12 +1,11 @@
 const fs = require("fs");
 const axios = require("axios");
+const util = require("util");
 const inquirer = require("inquirer");
+const genMarkdown = require("./utils/generateMarkdown")
 
+const writeToFile = util.promisify(fs.writeFile);
 
-const questions = [];
-
-function writeToFile(fileName, data) {
-}
 
 function promptUser()
 {
@@ -59,7 +58,12 @@ function promptUser()
 }
 
 async function init() {
-  promptUser();
+  const questions = await promptUser();
+  const markdown = await genMarkdown(questions);
+
+  await writeToFile('newReadMe.md', markdown);
+
+
 }
 
 
