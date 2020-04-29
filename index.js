@@ -60,9 +60,9 @@ function promptUser()
 async function init() {
   const questions = await promptUser();
   const markdown = await genMarkdown(questions);
-
+  
+  
   await writeToFile('newReadMe.md', markdown);
-
 
 }
 
