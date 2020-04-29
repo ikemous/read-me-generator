@@ -1,12 +1,13 @@
 
-# **a**
+# ****
 
 ## Badges
-[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
-![made-with-this](https://img.shields.io/badge/Made%20with-this-1f425f.svg) 
-![made-with-that](https://img.shields.io/badge/Made%20with-that-1f425f.svg) 
-![made-with-now](https://img.shields.io/badge/Made%20with-now-1f425f.svg) 
-![made-with-then](https://img.shields.io/badge/Made%20with-then-1f425f.svg) 
+![made-with-Node](https://img.shields.io/badge/Made%20With-Node-brightgreen) 
+![made-with-Javascript](https://img.shields.io/badge/Made%20With-Javascript-yellow) 
+![made-with-HTML](https://img.shields.io/badge/Made%20With-HTML-orange) 
+![made-with-CSS](https://img.shields.io/badge/Made%20With-CSS-blue) 
+![made-with-JQuery](https://img.shields.io/badge/Made%20With-JQuery-black) 
+![made-with-React](https://img.shields.io/badge/Made%20With-React-blue) 
 
 ## Table Of Contents
 - [title](#Title)
@@ -20,14 +21,14 @@
   > 
 
 ## Knowledge
-  feas
+  
 
 ## Test
   Below is the command needed to run the program :)
-  > sfd
+  > 
 
 ## Contribute
-  sfd
+  
 
 ## Questions ?
 

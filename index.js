@@ -34,8 +34,8 @@ function promptUser()
     {
       type: "checkbox",
       name: "userChoice",
-      choices: ["this", "that", "now", "then"],
-      message: "What kind of badges would you like to use?"
+      choices: ["Node", "Javascript", "HTML", "CSS", "JQuery", "React"],
+      message: "What Languages were used in making this project?"
     },   
     {
       type: "input",

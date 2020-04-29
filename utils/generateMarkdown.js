@@ -1,11 +1,37 @@
 function generateMarkdown(data) {
+
     const usersChoices = [...data.userChoice];
     let choiceBadges = "";
 
     for(let i = 0; i < usersChoices.length;i++)
-      choiceBadges += `![made-with-${usersChoices[i]}](https://img.shields.io/badge/Made%20with-${usersChoices[i]}-1f425f.svg) \n`;
+    {
+      let color;
+      switch(usersChoices[i])
+      {
+        case "Node":
+          color = "brightgreen";
+          break;
+        case "Javascript":
+          color = "yellow";
+          break;
+        case "HTML":
+          color = "orange";
+          break;
+        case "CSS":
+          color = "blue";
+          break;      
+        case "JQuery":
+          color = "black";
+          break;
+        case "React":
+          color = "blue";
+          break;
+        default:
+          break;
+      }
+      choiceBadges += `![made-with-${usersChoices[i]}](https://img.shields.io/badge/Made%20With-${usersChoices[i]}-${color}) \n`;
+    }
 
-    console.log(choiceBadges);
     
 
   return `
