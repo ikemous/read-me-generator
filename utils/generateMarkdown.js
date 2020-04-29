@@ -29,43 +29,53 @@ function generateMarkdown(data) {
         default:
           break;
       }
-      choiceBadges += `![made-with-${usersChoices[i]}](https://img.shields.io/badge/Made%20With-${usersChoices[i]}-${color}) \n`;
+      choiceBadges += `![Using](https://img.shields.io/badge/using-${usersChoices[i]}-${color}) \n`;
     }
 
     
 
   return `
-# **${data.title}**
+# ${data.title}
 
-## Badges
+## Made With Love
 `
 + choiceBadges +
 
 `
 ## Table Of Contents
-- [title](#Title)
-- [How To Install](#Installation)
-- [Knowledge Of Use](#Knowledge)
-- [How To Test](#Use)
-- [How To Contribute](#Contribute)
-- [Any Questions](#Questions)
+- [Languages Used](##Made-With-Love)
+- [User Story](#User-Story)
+- [How To Install](##Installation)
+- [How To Use](##How-To-Use)
+    - [Information Needed](###Information-Needed)
+    - [How To Test](###How-To-Test)
+- [How To Contribute](##Contribute)
+- [Any Questions](##Questions)
+
+## User Story
+  ${data.userStory}
 
 ## Installation
+  Below is the code needed to install dependencies for this project
   > ${data.installation}
 
-## Knowledge
-  ${data.userKnowledge}
+## How To Use
+  ### Information Needed
+    ${data.userKnowledge}
 
-## Test
-  Below is the command needed to run the program :)
-  > ${data.runTest}
+  ### How To Test
+    Below is the command needed to run the program :)
+    > ${data.runTest}
 
-## Contribute
+## How To Contribute
   ${data.contribution}
 
-## Questions ?
+## Questions
+![image of contributer](${data.avatar}) \n
+If there are any issues or questions about this project, you may contact ${data.name} directly at ${data.email}
 
-[![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/Naereen/ama)
+[![Visit My GitHub](https://img.shields.io/badge/Visit%20My%20GitHub-Click%20Me-1abc9c.svg)](${data.gitURL})
+
 
 `;
 }

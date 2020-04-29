@@ -6,6 +6,7 @@ const genMarkdown = require("./utils/generateMarkdown")
 
 const writeToFile = util.promisify(fs.writeFile);
 
+let questions;
 
 function promptUser()
 {
@@ -13,13 +14,23 @@ function promptUser()
 
     {
       type: "input",
-      name: "userName",
+      name: "username",
       message: "What is your Github username?"
+    },
+    {
+      type: "input",
+      name: "email",
+      message: "What is a good email to contact you?"
     },
     {
       type: "input",
       name: "title",
       message: "What is your project title?"
+    },
+    {
+      type: "input",
+      name: "userStory",
+      message: "Please Input The User Story"
     },
     {
       type: "input",
@@ -58,7 +69,13 @@ function promptUser()
 }
 
 async function init() {
-  const questions = await promptUser();
+  questions = await promptUser();
+  await axios.get(`https://api.github.com/users/${questions.username}`).then(function(response){
+
+   questions.avatar =  response.data.avatar_url;
+   questions.gitURL = response.data.html_url;
+   questions.name = response.data.name;
+  });
   const markdown = await genMarkdown(questions);
   
   
