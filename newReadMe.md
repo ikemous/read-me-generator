@@ -53,7 +53,7 @@ Below is the command needed to run the program :)
 --------------------------
 ![image of contributer](https://avatars1.githubusercontent.com/u/57930755?v=4) 
 
-If there are any issues or questions about this project, you may contact Ike Barranco directly at asdf
+If there are any issues or questions about this project, you may contact Ike Barranco directly at 
 
 [![Visit My GitHub](https://img.shields.io/badge/Visit%20My%20GitHub-Click%20Me-1abc9c.svg)](https://github.com/ikemous)
 
@@ -70,15 +70,9 @@ If there are any issues or questions about this project, you may contact Ike Bar
 ## Made With Love 💖
 --------------------------
 [![Using Node](https://img.shields.io/badge/Using-Node-brightgreen)](${https://nodejs.org/en/}) 
-[![Using](https://img.shields.io/badge/using-Node-undefined)](undefined) 
 [![Using Javascript](https://img.shields.io/badge/Using-Javascript-yellow)](${https://www.javascript.com/}) 
-[![Using](https://img.shields.io/badge/using-Javascript-undefined)](undefined) 
 [![Using HTML](https://img.shields.io/badge/Using-HTML-orange)](https://www.w3schools.com/html/) 
-[![Using](https://img.shields.io/badge/using-HTML-undefined)](undefined) 
 [![Using CSS](https://img.shields.io/badge/Using-CSS-blue)](https://www.w3schools.com/css/) 
-[![Using](https://img.shields.io/badge/using-CSS-undefined)](undefined) 
 [![Using JQuery](https://img.shields.io/badge/Using-JQuery-black)](https://jquery.com/) 
-[![Using](https://img.shields.io/badge/using-JQuery-undefined)](undefined) 
 [![Using React](https://img.shields.io/badge/Using-React-blue)](https://reactjs.org/) 
-[![Using](https://img.shields.io/badge/using-React-undefined)](undefined) 
 
