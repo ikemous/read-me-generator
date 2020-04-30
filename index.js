@@ -29,8 +29,18 @@ function promptUser()
     },
     {
       type: "input",
-      name: "userStory",
-      message: "Please Input The User Story"
+      name: "userStoryPart1",
+      message: "Please complete the following sentence for the user story: AS A..."
+    },
+    {
+      type: "input",
+      name: "userStoryPart2",
+      message: "Please complete the following sentence for the user story: I WANT..."
+    },
+    {
+      type: "input",
+      name: "userStoryPart3",
+      message: "Please complete the following sentence for the user story: SO THAT I..."
     },
     {
       type: "input",
@@ -75,6 +85,11 @@ async function init() {
    questions.avatar =  response.data.avatar_url;
    questions.gitURL = response.data.html_url;
    questions.name = response.data.name;
+  }).catch(function(){
+    console.log("Github account not found or not entered")
+    questions.avatar =  "";
+   questions.gitURL = "";
+   questions.name = "";
   });
   const markdown = await genMarkdown(questions);
   
