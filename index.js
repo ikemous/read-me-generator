@@ -43,7 +43,7 @@ function promptUser()
       message: "Please complete the following sentence for the user story: SO THAT I..."
     },
     {
-      type: "input",
+      type: "editor",
       name: "description",
       message: "How would you describe your project?"
     },
@@ -51,15 +51,9 @@ function promptUser()
       type: "input",
       name: "installation",
       message: "What command should be used to intall your depencies?"
-    },
+    },  
     {
-      type: "checkbox",
-      name: "userChoice",
-      choices: ["Node", "Javascript", "HTML", "CSS", "JQuery", "React"],
-      message: "What Languages were used in making this project?"
-    },   
-    {
-      type: "input",
+      type: "editor",
       name: "userKnowledge",
       message: "What does the user need to know about running the program?"
     }, 
@@ -69,12 +63,24 @@ function promptUser()
       message: "What command must be run to test the program?"
     },
     {
-      type: "input",
+      type: "editor",
       name: "contribution",
       message: "How can someone contribute to this project?"
     },
-
-
+    {
+      type: "checkbox",
+      name: "userChoice",
+      choices: ["Node", "Javascript", "HTML", "CSS", "JQuery", "React"],
+      message: "What Languages were used in making this project?",
+      default: "none"
+    }, 
+    {
+      type: "checkbox",
+      name: "license",
+      choices: ["Apache2.0", "BSD203", "BSD201", "EPL201", "MIT", "ISC"],
+      message: "What licenses are included?",
+      default: "none"
+    }
   ]);
 }
 
