@@ -1,5 +1,5 @@
 
-# 
+# Read-me-generator
 ## Table Of Contents
 - [User Story](#User-Story)
 - [How To Install](##Installation)
@@ -14,11 +14,11 @@
 ## User Story
 --------------------------
 ```
-AS A  
+AS A Developer 
 
-I WANT TO  
+I WANT TO to create a readme file 
 
-SO THAT I  
+SO THAT I can tell the user the purpose of the program 
 
 ```
 
@@ -26,35 +26,35 @@ SO THAT I
 --------------------------
 ```
 Below is the code needed to install dependencies for this project
-> 
+> npm install
 ```
 
 ## How To Use
 ---------------------------
 ### Information Needed
 ```
-
+user needs to knw a lot
 ```
 
 ### How To Test
 ```
 Below is the command needed to run the program :)
-> 
+> node index.js
 ```
 
 ## How To Contribute
 --------------------------
 ```
-
+donate!!!
 ```
 
 ## Questions
 --------------------------
-![image of contributer]() 
+![image of contributer](https://avatars1.githubusercontent.com/u/57930755?v=4) 
 
-If there are any issues or questions about this project, you may contact  directly at 
+If there are any issues or questions about this project, you may contact Ike Barranco directly at barranco.ike@gmail.com
 
-[![Visit My GitHub](https://img.shields.io/badge/Visit%20My%20GitHub-Click%20Me-1abc9c.svg)]()
+[![Visit My GitHub](https://img.shields.io/badge/Visit%20My%20GitHub-Click%20Me-1abc9c.svg)](https://github.com/ikemous)
 
 ## License(s)
 --------------------------
@@ -70,8 +70,4 @@ If there are any issues or questions about this project, you may contact  direct
 --------------------------
 [![Using Node](https://img.shields.io/badge/Using-Node-brightgreen)](${https://nodejs.org/en/}) 
 [![Using Javascript](https://img.shields.io/badge/Using-Javascript-yellow)](${https://www.javascript.com/}) 
-[![Using HTML](https://img.shields.io/badge/Using-HTML-orange)](https://www.w3schools.com/html/) 
-[![Using CSS](https://img.shields.io/badge/Using-CSS-blue)](https://www.w3schools.com/css/) 
-[![Using JQuery](https://img.shields.io/badge/Using-JQuery-black)](https://jquery.com/) 
-[![Using React](https://img.shields.io/badge/Using-React-blue)](https://reactjs.org/) 
 

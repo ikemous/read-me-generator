@@ -130,12 +130,15 @@ async function init() {
   //Create Mardown Page using genMardown in generateMarkdown.js
   const markdown = await genMarkdown(answers);
   
+  console.log("Generating README.md...")
   //Write README.md inside readMeFile folder
   await writeToFile('./readMeFile/README.md', markdown);
-
+  
+  console.log("README.md has been created in the readMeFile folder!");
 }
 
 init();
+
 
 
 

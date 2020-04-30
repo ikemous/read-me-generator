@@ -62,7 +62,7 @@ const generateBadges = (badgeChoices) => {
 
 /**
  * generateMarkdown()
- * Purpose: using sent data, generateLicenseBadges, and generateLanguageBadges. A Markdown file will be generated 
+ * Purpose: using sent data and generateBadges method to create a string with the markdown file
  * Parameters: data - information gathered from the user
  * Return: string literal with the completed markdown file 
 */
