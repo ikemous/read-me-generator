@@ -73,7 +73,6 @@ function generateMarkdown(data) {
   return `
 # ${data.title}
 ## Table Of Contents
-- [Languages Used](##Made-With-Love)
 - [User Story](#User-Story)
 - [How To Install](##Installation)
 - [How To Use](##How-To-Use)

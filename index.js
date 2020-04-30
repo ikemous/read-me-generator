@@ -103,28 +103,37 @@ function promptUser()
   ]);//End Questions with Inquierer
 }//End prmoptUser()
 
+/**
+ * init()
+ * Purpose: To Initialize the questions for the user to answer and initialize the markdown to be generated
+ * Parameters: None
+ * Return: None 
+*/
 async function init() {
-  let questions = await promptUser();
-  await axios.get(`https://api.github.com/users/${questions.username}`).then(function(response){
-
-   questions.avatar =  response.data.avatar_url;
-   questions.gitURL = response.data.html_url;
-   questions.name = response.data.name;
+  //gather users answers to the questions using promptUser()
+  let answers = await promptUser();
+  //Gather github information from the github API
+  await axios.get(`https://api.github.com/users/${answers.username}`).then(function(response){
+    //Add variables to the answers object
+    answers.avatar =  response.data.avatar_url;
+    answers.gitURL = response.data.html_url;
+    answers.name = response.data.name;
   }).catch(function(){
-    console.log("Github account not found or not entered")
-    questions.avatar =  "";
-   questions.gitURL = "";
-   questions.name = "";
-  });
+    //Let User Know That Account Was Not Found
+    console.log("Github account not found or not entered");
+    //Add empty information to the answers
+    answers.avatar =  "";
+    answers.gitURL = "";
+    answers.name = "";
+  });//End 
 
-  const markdown = await genMarkdown(questions);
+  //Create Mardown Page using genMardown in generateMarkdown.js
+  const markdown = await genMarkdown(answers);
   
-  
-  await writeToFile('newReadMe.md', markdown);
+  //Write README.md inside readMeFile folder
+  await writeToFile('./readMeFile/README.md', markdown);
 
 }
-
-
 
 init();
 
