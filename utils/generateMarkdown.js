@@ -65,19 +65,27 @@ const generateLanguageBadges = (badgeChoices) => {
   return choiceBadges;
 }
 
+/**
+ * generateMarkdown()
+ * Purpose: using sent data, generateLicenseBadges, and generateLanguageBadges. A Markdown file will be generated 
+ * Parameters: data - information gathered from the user
+ * Return: string literal with the completed markdown file 
+*/
 function generateMarkdown(data) {
 
-  let licenseBadges = generateLicenseBadges(data.license);
-  let choiceBadges = generateLanguageBadges(data.languages); 
+  //Generate badges into a string
+  let licenseBadges = generateLicenseBadges(data.license);//license badge(s)
+  let choiceBadges = generateLanguageBadges(data.languages);//language badges(s)
 
+  //return markodwn file
   return `
 # ${data.title}
 ## Table Of Contents
 - [User Story](#User-Story)
 - [How To Install](##Installation)
 - [How To Use](##How-To-Use)
-    - [Information Needed](###Information-Needed)
-    - [How To Test](###How-To-Test)
+  - [Information Needed](###Information-Needed)
+  - [How To Test](###How-To-Test)
 - [How To Contribute](##Contribute)
 - [Any Questions](##Questions)
 - [License(s)](##License(s))
@@ -132,6 +140,7 @@ ${licenseBadges}
 --------------------------
 ${choiceBadges}
 `;
-}
+}//End generateMarkdown
 
+//Allow generateMarkdown to be used by other files
 module.exports = generateMarkdown;
