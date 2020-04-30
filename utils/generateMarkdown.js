@@ -37,33 +37,26 @@ function generateMarkdown(data) {
       switch(badge)
       {
         case "Node":
-          website = "https://nodejs.org/en/"
-          color = "brightgreen";
+          choiceBadges += "[![Using Node](https://img.shields.io/badge/Using-Node-brightgreen)](${https://nodejs.org/en/}) \n";
           break;
         case "Javascript":
-          website = "https://www.javascript.com/";
-          color = "yellow";
+          choiceBadges += "[![Using Javascript](https://img.shields.io/badge/Using-Javascript-yellow)](${https://www.javascript.com/}) \n";
           break;
         case "HTML":
-          website = "https://www.w3schools.com/html/";
-          color = "orange";
+          choiceBadges += "[![Using HTML](https://img.shields.io/badge/Using-HTML-orange)](https://www.w3schools.com/html/) \n";
           break;
         case "CSS":
-          website = "https://www.w3schools.com/css/";
-          color = "blue";
+          choiceBadges += "[![Using CSS](https://img.shields.io/badge/Using-CSS-blue)](https://www.w3schools.com/css/) \n";
           break;      
         case "JQuery":
-          website = "https://jquery.com/";
-          color = "black";
+          choiceBadges += "[![Using JQuery](https://img.shields.io/badge/Using-JQuery-black)](https://jquery.com/) \n";
           break;
         case "React":
-          website = "https://reactjs.org/";
-          color = "blue";
+          choiceBadges += "[![Using React](https://img.shields.io/badge/Using-React-blue)](https://reactjs.org/) \n";
           break;
         default:
           break;
       }
-      choiceBadges += `[![Using](https://img.shields.io/badge/using-${badge}-${color})](${website}) \n`;
     });    
 
   return `
