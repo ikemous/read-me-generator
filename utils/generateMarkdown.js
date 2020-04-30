@@ -1,69 +1,64 @@
-const generateLicenseBadges = (badgeChoices) =>{
+/**
+ * benerateBadges()
+ * Purpose: compile all badges into a string usable by the markdown language 
+ * Parameters: badgeChoices - array of language choices selected by user
+ * Return: badges - string with usable markdDown code containing badges
+*/
+const generateBadges = (badgeChoices) => {
 
-  let licenseBadges = "";
+  //String to be sent back
+  let badges = "";
 
+  //Loop through all choices
   badgeChoices.forEach(badge => {
-    switch(badge)
-    {
-      case "Apache2.0":
-        licenseBadges += "[![License: Apache2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) \n";
-        break;
-      case "BSD203":
-        licenseBadges += "[![License: BSD203](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause) \n";
-        break;
-      case "BSD201":
-        licenseBadges += "[![License: BSD202](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause) \n";
-        break;
-      case "EPL201":
-        licenseBadges += "[![License: EPL201](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0) \n";
-        break;
-      case "MIT":
-        licenseBadges += "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) \n";
-        break;
-      case "ISC":
-        licenseBadges += "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC) \n";
-        break;
-      default:
-        break;
-    }
-
-  });
-
-  return licenseBadges;
-}
-
-const generateLanguageBadges = (badgeChoices) => {
-  
-  let choiceBadges = "";
-
-  badgeChoices.forEach(badge => {
+    //Check Choices
     switch(badge)
     {
       case "Node":
-        choiceBadges += "[![Using Node](https://img.shields.io/badge/Using-Node-brightgreen)](${https://nodejs.org/en/}) \n";
+        badges += "[![Using Node](https://img.shields.io/badge/Using-Node-brightgreen)](${https://nodejs.org/en/}) \n";
         break;
       case "Javascript":
-        choiceBadges += "[![Using Javascript](https://img.shields.io/badge/Using-Javascript-yellow)](${https://www.javascript.com/}) \n";
+        badges += "[![Using Javascript](https://img.shields.io/badge/Using-Javascript-yellow)](${https://www.javascript.com/}) \n";
         break;
       case "HTML":
-        choiceBadges += "[![Using HTML](https://img.shields.io/badge/Using-HTML-orange)](https://www.w3schools.com/html/) \n";
+        badges += "[![Using HTML](https://img.shields.io/badge/Using-HTML-orange)](https://www.w3schools.com/html/) \n";
         break;
       case "CSS":
-        choiceBadges += "[![Using CSS](https://img.shields.io/badge/Using-CSS-blue)](https://www.w3schools.com/css/) \n";
+        badges += "[![Using CSS](https://img.shields.io/badge/Using-CSS-blue)](https://www.w3schools.com/css/) \n";
         break;      
       case "JQuery":
-        choiceBadges += "[![Using JQuery](https://img.shields.io/badge/Using-JQuery-black)](https://jquery.com/) \n";
+        badges += "[![Using JQuery](https://img.shields.io/badge/Using-JQuery-black)](https://jquery.com/) \n";
         break;
       case "React":
-        choiceBadges += "[![Using React](https://img.shields.io/badge/Using-React-blue)](https://reactjs.org/) \n";
+        badges += "[![Using React](https://img.shields.io/badge/Using-React-blue)](https://reactjs.org/) \n";
+        break;
+      case "Apache2.0":
+        badges += "[![License: Apache2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) \n";
+        break;
+      case "BSD203":
+        badges += "[![License: BSD203](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause) \n";
+        break;
+      case "BSD201":
+        badges += "[![License: BSD202](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause) \n";
+        break;
+      case "EPL201":
+        badges += "[![License: EPL201](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0) \n";
+        break;
+      case "MIT":
+        badges += "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) \n";
+        break;
+      case "ISC":
+        badges += "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC) \n";
         break;
       default:
         break;
-    }
-  });
+    }//end Checking Choices
+  });//End Looping through all choices
 
-  return choiceBadges;
-}
+  //Return string of badges
+  return badges;
+
+}//End generateBadges()
 
 /**
  * generateMarkdown()
@@ -74,8 +69,8 @@ const generateLanguageBadges = (badgeChoices) => {
 function generateMarkdown(data) {
 
   //Generate badges into a string
-  let licenseBadges = generateLicenseBadges(data.license);//license badge(s)
-  let choiceBadges = generateLanguageBadges(data.languages);//language badges(s)
+  let licenseBadges = generateBadges(data.license);//license badge(s)
+  let choiceBadges = generateBadges(data.languages);//language badges(s)
 
   //return markodwn file
   return `
