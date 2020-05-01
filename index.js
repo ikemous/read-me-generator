@@ -137,6 +137,7 @@ async function init() {
   console.log("README.md has been created in the readMeFile folder!");
 }
 
+//Start the Program
 init();
 
 

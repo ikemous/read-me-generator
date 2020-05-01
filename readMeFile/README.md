@@ -1,5 +1,5 @@
 
-# Read-me-generator
+# read-me-generator
 ## Table Of Contents
 - [User Story](#User-Story)
 - [How To Install](##Installation)
@@ -14,11 +14,11 @@
 ## User Story
 --------------------------
 ```
-AS A Developer 
+AS A developer 
 
-I WANT TO to create a readme file 
+I WANT TO to create a readme 
 
-SO THAT I can tell the user the purpose of the program 
+SO THAT I can tell user how i want the program to function 
 
 ```
 
@@ -33,7 +33,8 @@ Below is the code needed to install dependencies for this project
 ---------------------------
 ### Information Needed
 ```
-user needs to knw a lot
+this is the information the user needs to know to run the program
+
 ```
 
 ### How To Test
@@ -45,7 +46,8 @@ Below is the command needed to run the program :)
 ## How To Contribute
 --------------------------
 ```
-donate!!!
+enter contribution here
+
 ```
 
 ## Questions
